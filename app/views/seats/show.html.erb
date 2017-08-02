@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avail seats:</strong>
+  <%= @seat.avail_seats %>
+</p>
+
+<p>
+  <strong>Unavail seats:</strong>
+  <%= @seat.unavail_seats %>
+</p>
+
+<p>
+  <strong>S dtime:</strong>
+  <%= @seat.s_dtime %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @seat.route_id %>
+</p>
+
+<p>
+  <strong>Bus:</strong>
+  <%= @seat.bus_id %>
+</p>
+
+<%= link_to 'Edit', edit_seat_path(@seat) %> |
+<%= link_to 'Back', seats_path %>

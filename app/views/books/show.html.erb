@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Login:</strong>
+  <%= @book.login_id %>
+</p>
+
+<p>
+  <strong>Route:</strong>
+  <%= @book.route_id %>
+</p>
+
+<p>
+  <strong>No tickets:</strong>
+  <%= @book.no_tickets %>
+</p>
+
+<p>
+  <strong>Phone no:</strong>
+  <%= @book.phone_no %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @book.email %>
+</p>
+
+<p>
+  <strong>Total fare:</strong>
+  <%= @book.total_fare %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>

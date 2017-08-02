@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  from_location: MyString
+  to_location: MyString
+  bus_id: 1
+  fare: 9.99
+  route_time: 2017-08-02 22:54:50
+
+two:
+  from_location: MyString
+  to_location: MyString
+  bus_id: 1
+  fare: 9.99
+  route_time: 2017-08-02 22:54:50

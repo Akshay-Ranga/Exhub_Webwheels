@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  login_id: 1
+  route_id: 1
+  no_tickets: 1
+  phone_no: 1
+  email: MyString
+  total_fare: 9.99
+
+two:
+  login_id: 1
+  route_id: 1
+  no_tickets: 1
+  phone_no: 1
+  email: MyString
+  total_fare: 9.99
