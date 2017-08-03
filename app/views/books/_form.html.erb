@@ -13,13 +13,27 @@
 
   <div class="field">
     <%= form.label :login_id %>
-    <%= form.number_field :login_id, id: :book_login_id %>
+    <%= form.collection_select :login_id, Login.all, :id, :user_name, prompt:"User name" %>
   </div>
 
   <div class="field">
     <%= form.label :route_id %>
-    <%= form.number_field :route_id, id: :book_route_id %>
+    <%= form.collection_select :route_id, Route.all, :id, :from_location, prompt:"select PickUp location"  %>
   </div>
+  
+  <div class="field">
+    <%= form.label :route_id %>
+    <%= form.collection_select :route_id, Route.all, :id, :to_location, prompt:"select Drop location"  %>
+  </div>
+
+    <div class="field">
+    <%= form.label :route_id %>
+    <%= form.collection_select :route_id, Route.all, :id, :route_time, prompt:"select date"  %>
+  </div>
+
+
+
+
 
   <div class="field">
     <%= form.label :no_tickets %>
