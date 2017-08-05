@@ -2,7 +2,7 @@
 
 <p>
   <strong>Login:</strong>
-  <%= @book.login_id %>
+  <%= Login.find(@book.login_id).user_name %>
 </p>
 
 <p>
@@ -11,8 +11,28 @@
 </p>
 
 <p>
-  <strong>No tickets:</strong>
+  <strong>Pick Up Point</strong>
+  <%= Route.find(@book.route_id).from_location %>
+</p>
+
+<p>
+  <strong>End Point</strong>
+  <%= Route.find(@book.route_id).to_location %>
+</p>
+
+<p>
+  <strong>No. of Tickets</strong>
   <%= @book.no_tickets %>
+</p>
+
+<p>
+  <strong> Bus no.</strong>
+  <%= Route.find(@book.route_id).bus_id %>
+</p>
+
+<p>
+  <strong>Date Time</strong>
+  <%= Route.find(@book.route_id).route_time %>
 </p>
 
 <p>
@@ -27,7 +47,7 @@
 
 <p>
   <strong>Total fare:</strong>
-  <%= @book.total_fare %>
+  <%= Route.find(@book.total_fare).fare %>
 </p>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |

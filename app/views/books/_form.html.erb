@@ -52,7 +52,7 @@
 
   <div class="field">
     <%= form.label :total_fare %>
-    <%= form.text_field :total_fare, id: :book_total_fare %>
+    <%= form.collection_select :total_fare, Route.all, :id, :fare, id: :book_total_fare %>
   </div>
 
   <div class="actions">

@@ -5,10 +5,10 @@
 <table>
   <thead>
     <tr>
-      <th>Bus type</th>
-      <th>Bus seats</th>
-      <th>Description</th>
-      <th>Bus operator</th>
+      <th><span style = "padding-left:68px">Bus type</span></th>
+      <th><span style = "padding-left:68px">Bus seats</span></th>
+      <th><span style = "padding-left:68px">Description</span></th>
+      <th><span style = "padding-left:68px">Bus operator</span></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,11 +16,11 @@
   <tbody>
     <% @buses.each do |bus| %>
       <tr>
-        <td><%= bus.bus_type %></td>
-        <td><%= bus.bus_seats %></td>
-        <td><%= bus.description %></td>
-        <td><%= bus.bus_operator %></td>
-        <td><%= link_to 'Show', bus %></td>
+        <td><span style = "padding-left:68px"><%= bus.bus_type %></span></td>
+        <td><span style = "padding-left:68px"><%= bus.bus_seats %></span></td>
+        <td><span style = "padding-left:68px"><%= bus.description %></span></td>
+        <td><span style = "padding-left:68px"><%= bus.bus_operator %></span></td>
+        <td><span style = "padding-left:68px"><%= link_to 'Show', bus %></span></td>
         <td><%= link_to 'Edit', edit_bus_path(bus) %></td>
         <td><%= link_to 'Destroy', bus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

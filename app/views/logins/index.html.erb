@@ -5,8 +5,8 @@
 <table>
   <thead>
     <tr>
-      <th>User name</th>
-      <th>Password</th>
+      <th><span style = "padding-left:68px">User name</span></th>
+      <th><span style = "padding-left:68px">Password</span></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -329,9 +329,9 @@
 
     <% @logins.each do |login| %>
       <tr>
-        <td><%= login.user_name %></td>
-        <td><%= login.password %></td>
-        <td><%= link_to 'Show', login %></td>
+        <td><span style = "padding-left:68px"><%= login.user_name %></span></td>
+        <td><span style = "padding-left:68px"><%= login.password %></span></td>
+        <td><span style = "padding-left:68px"><%= link_to 'Show', login %></span></td>
         <td><%= link_to 'Edit', edit_login_path(login) %></td>
         <td><%= link_to 'Destroy', login, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
