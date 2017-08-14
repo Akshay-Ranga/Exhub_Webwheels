@@ -6,7 +6,8 @@
   <thead>
     <tr>
       <th>Login</th>
-      <th><span style = "padding-left:68px">Route No.</span></th>
+      <th><span style = "padding-left:68px">Pick Up Location</span></th>
+      <th><span style = "padding-left:68px">Drop Location</span></th>
       <th><span style = "padding-left:68px">No tickets</span></th>
       <th><span style = "padding-left:68px">Phone no</span></th>
       <th><span style = "padding-left:68px">Email</span></th>
@@ -18,8 +19,11 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
-        <td><%= book.login_id %></td>
-        <td><span style = "padding-left:68px"><%= book.route_id %></span></td>
+        <td>
+          <%= Login.find(book.login_id).user_name %>
+        </td>
+        <td><span style = "padding-left:68px"><%= Route.find(book.route_id).from_location %></span></td>
+        <td><span style = "padding-left:68px"><%= Route.find(book.route_id).to_location %></span></td>
         <td><span style = "padding-left:68px"><%= book.no_tickets %></span></td>
         <td><span style = "padding-left:68px"><%= book.phone_no %></span></td>
         <td><span style = "padding-left:68px"><%= book.email %></span></td>

@@ -8,11 +8,12 @@
       <th><span style = "padding-left:68px">From location</span></th>
       <th><span style = "padding-left:68px">To location</span></th>
       <th><span style = "padding-left:68px">Bus</span></th>
+      <th><span style = "padding-left:68px">Bus Type</span></th>
       <th><span style = "padding-left:68px">Fare</span></th>
       <th><span style = "padding-left:68px">Route time</span></th>
       <th colspan="3"></th>
     </tr>
-  </thead>
+  </thead>  
 
   <tbody>
     <% @routes.each do |route| %>
@@ -20,6 +21,7 @@
         <td><span style = "padding-left:68px"><%= route.from_location %></span></td>
         <td><span style = "padding-left:68px"><%= route.to_location %></span></td>
         <td><span style = "padding-left:68px"><%= route.bus_id %></span></td>
+        <td><span style = "padding-left:68px"><%= Bus.find(route.bus_id).bus_type %></span></td>
         <td><span style = "padding-left:68px"><%= route.fare %></span></td>
         <td><span style = "padding-left:68px"><%= route.route_time %></span></td>
         <td><span style = "padding-left:68px"><%= link_to 'Show', route %></span></td>
