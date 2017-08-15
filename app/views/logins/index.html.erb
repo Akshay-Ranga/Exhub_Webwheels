@@ -3,17 +3,12 @@
 
 
 <table>
-  <thead>
-    <tr>
-      <th><span style = "padding-left:68px">User name</span></th>
-      <th><span style = "padding-left:68px">Password</span></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  
 
   <tbody>
 
     <body>
+
     <%= yield %>
 
     <!--- banner ---->
@@ -59,7 +54,7 @@
                 <!---/End-date-piker---->
             </div>
             <div class="sear">
-                <form action="/routes">
+                <form action="/routes?">
                     <button class="seabtn btn-block">Search Buses</button>
                 </form>
             </div>
@@ -327,18 +322,10 @@
 <h1>Logins</h1>
 
 
-    <% @logins.each do |login| %>
-      <tr>
-        <td><span style = "padding-left:68px"><%= login.user_name %></span></td>
-        <td><span style = "padding-left:68px"><%= login.password %></span></td>
-        <td><span style = "padding-left:68px"><%= link_to 'Show', login %></span></td>
-        <td><%= link_to 'Edit', edit_login_path(login) %></td>
-        <td><%= link_to 'Destroy', login, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
+
   </tbody>
 </table>
 
 <br>
 
-<%= link_to 'New Login', new_login_path %>
+<%= link_to 'Sign up', new_user_registration_path %>
